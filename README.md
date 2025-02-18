@@ -36,8 +36,8 @@ To use this module, add it to the modules array in the `config/config.js` file:
         config: {
             counters: [
                 {
-                    targetDate: '30-09-2025', // Format: dd-mm-yyyy
-                }, // Repeat for more counters
+                    targetDate: '30-09-2025',
+                },
             ]
         }
     },
@@ -52,11 +52,11 @@ Or use all the options:
             counters: [
                 {
                     title: 'My Count Down',
-                    targetDate: '30-09-2025', // Format: dd-mm-yyyy
-                    targetTime: '23:59', // Format: HH:mm
+                    targetDate: '30-09-2025',
+                    targetTime: '23:59',
                     countdownUnit: 'minutes',
                     showUnit: false,
-                }, // Repeat for more counters
+                },
             ]
         }
     },
