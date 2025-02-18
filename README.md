@@ -36,6 +36,21 @@ To use this module, add it to the modules array in the `config/config.js` file:
         config: {
             counters: [
                 {
+                    targetDate: '30-09-2025', // Format: dd-mm-yyyy
+                }, // Repeat for more counters
+            ]
+        }
+    },
+```
+
+Or use all the options:
+```js
+    {
+        module: 'MMM-CountDown',
+        position: 'lower_third',
+        config: {
+            counters: [
+                {
                     title: 'My Count Down',
                     targetDate: '30-09-2025', // Format: dd-mm-yyyy
                     targetTime: '23:59', // Format: HH:mm
@@ -46,6 +61,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
         }
     },
 ```
+
 
 ## Configuration options
 
