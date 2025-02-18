@@ -1,29 +1,31 @@
-# MMM-Template
+# MMM-CountDown
+Create a simple countdown. 
+
 Use this template for creating new MagicMirror² modules.
 
-See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-Template/wiki) for an in depth overview of how to get started.
+See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-CountDown/wiki) for an in depth overview of how to get started.
 
-# MMM-Template
+# MMM-CountDown
 
-![Example of MMM-Template](./example_1.png)
+![Example of MMM-CountDown](Example.png)
 
-[Module description]
+Count down to a date and time
 
 ## Installation
 
 ### Install
 
-In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-Template:
+In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-CountDown:
 
 ```bash
 cd ~/MagicMirror/modules
-git clone [GitHub url]
+git clone https://github.com/davi2206/MMM-CountDown
 ```
 
 ### Update
 
 ```bash
-cd ~/MagicMirror/modules/MMM-Template
+cd ~/MagicMirror/modules/MMM-CountDown
 git pull
 ```
 
@@ -33,34 +35,33 @@ To use this module, add it to the modules array in the `config/config.js` file:
 
 ```js
     {
-        module: 'MMM-Template',
-        position: 'lower_third'
-    },
-```
-
-Or you could use all the options:
-
-```js
-    {
-        module: 'MMM-Template',
+        module: 'MMM-CountDown',
         position: 'lower_third',
         config: {
-            exampleContent: 'Welcome world'
+			counters: [
+                {
+                    title: 'My Count Down',
+                    targetDate: '30-09-2025', // Format: dd-mm-yyyy
+                    targetTime: '23:59', // Format: HH:mm
+                    countdownUnit: 'minutes',
+                    showUnit: false,
+                }, // Repeat for more counters
+            ]
         }
     },
 ```
 
 ## Configuration options
 
-Option|Possible values|Default|Description
-------|------|------|-----------
-`exampleContent`|`string`|not available|The content to show on the page
+Option          |Type      |Possible values                                     |Default      |Description
+----------------|----------|------------------------------                      |------       |-----------
+`title`         |`string`  |Any text                                            |empty        |The title to show above a counter
+`targetDate`    |`string`  |Date in format dd-mm-yyyy                           |n/a          |Required. The date to count down to
+`targetTime`    |`string`  |Time in 24 hour format: HH:mm                       |00:00        |The time of day to count down to
+`countdownUnit` |`string`  |seconds, minutes, hours, days, weeks, months, years |minutes      |The unit to count down
+`showUnit`      |`boolean` |true or false                                       |false        |Weather to show the unit after the number
 
 ## Sending notifications to the module
-
-Notification|Description
-------|-----------
-`TEMPLATE_RANDOM_TEXT`|Payload must contain the text that needs to be shown on this module
 
 ## Developer commands
 
