@@ -1,10 +1,6 @@
 # MMM-CountDown
 Create a simple countdown. 
 
-Use this template for creating new MagicMirror² modules.
-
-See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-CountDown/wiki) for an in depth overview of how to get started.
-
 # MMM-CountDown
 
 ![Example of MMM-CountDown](Example.png)
@@ -38,7 +34,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
         module: 'MMM-CountDown',
         position: 'lower_third',
         config: {
-			counters: [
+            counters: [
                 {
                     title: 'My Count Down',
                     targetDate: '30-09-2025', // Format: dd-mm-yyyy
@@ -57,11 +53,9 @@ Option          |Type      |Possible values                                     
 ----------------|----------|------------------------------                      |------       |-----------
 `title`         |`string`  |Any text                                            |empty        |The title to show above a counter
 `targetDate`    |`string`  |Date in format dd-mm-yyyy                           |n/a          |Required. The date to count down to
-`targetTime`    |`string`  |Time in 24 hour format: HH:mm                       |00:00        |The time of day to count down to
-`countdownUnit` |`string`  |seconds, minutes, hours, days, weeks, months, years |minutes      |The unit to count down
+`targetTime`    |`string`  |Time in 24 hour format: HH:mm                       |'00:00'      |The time of day to count down to
+`countdownUnit` |`string`  |seconds, minutes, hours, days, weeks, months, years |'minutes'    |The unit to count down
 `showUnit`      |`boolean` |true or false                                       |false        |Weather to show the unit after the number
-
-## Sending notifications to the module
 
 ## Developer commands
 
