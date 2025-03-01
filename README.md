@@ -49,6 +49,7 @@ Or use all the options:
         module: 'MMM-CountDown',
         position: 'lower_third',
         config: {
+            fontSize: 2,
             counters: [
                 {
                     title: 'My Count Down',
@@ -67,6 +68,7 @@ Or use all the options:
 
 Option          |Type      |Possible values                                     |Default      |Description
 ----------------|----------|------------------------------                      |------       |-----------
+`fontSize`      |`int`     |Single number                                       |4            |The font size in css rem
 `title`         |`string`  |Any text                                            |empty        |The title to show above a counter
 `targetDate`    |`string`  |Date in format dd-mm-yyyy                           |n/a          |Required. The date to count down to
 `targetTime`    |`string`  |Time in 24 hour format: HH:mm                       |'00:00'      |The time of day to count down to

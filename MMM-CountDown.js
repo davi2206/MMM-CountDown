@@ -44,6 +44,7 @@ Module.register("MMM-CountDown", {
   updateTimeLeft() {
     let nf = new Intl.NumberFormat('da-DK');
     wrapper = document.createElement("div");
+    wrapper.style.fontSize = `${this.config.fontSize}rem`;
     counters.forEach(counter => {
       if(!counter.targetTime) counter.targetTime = '00:00';
       endDate = counter.targetDate.split('-');
